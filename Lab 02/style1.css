@@ -1,0 +1,30 @@
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .pricing-table th,
+  .pricing-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  .pricing-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .pricing-table .btn {
+    background-color: #4CAF50;
+    border: 1px solid #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
