@@ -1,0 +1,23 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    border-color: black; 
+    border: 5px solid;
+    background-color: blue; 
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    justify-content: space-between;
+}
+
+#ball{
+    display: flex;
+    border-color: black; 
+    border: 5px solid;
+    background-color: red; 
+    border-radius: 50%;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+    justify-content: space-between;
+}
