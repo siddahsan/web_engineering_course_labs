@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7</title>
+    <style>
+        * {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="toDoList-Input" type="text" placeholder="Enter the task">
+    <div id="my_div"></div>
+    <button id="btn-add">Add</button>
+    <script>
+        // const my_list = document.getElementById("my_ol")
+        // my_list.innerHTML = "<h1>Heading 1</h1>"
+        // console.log(my_list.innerHTML)
+        // console.log(my_list.innerText)
+        // const para = document.getElementsByTagName('p')
+        // para[0].innerText = "Updated Text through JS"
+
+        // const div = document.querySelectorAll("#my_div>p")
+        // console.log(div)
+        const add_btn = document.getElementById("btn-add")
+        const add_rem = document.getElementById("btn-rem")
+        const toDoList = document.getElementById("toDoList-Input")
+
+        function add() {
+            const div = document.getElementById('my_div')
+            const child = document.createElement('div')
+            const toDoList = document.getElementById("toDoList-Input")
+            child.textContent = toDoList.value
+            if (toDoList.value == '') {
+                alert("Must Write Something in Input Field")
+            } else {
+                child.className = "child";
+                const buttonDelete = document.createElement('button')
+                buttonDelete.innerText = 'delete'
+                child.appendChild(buttonDelete);
+                buttonDelete.onclick = function () {
+                    child.remove();
+                }
+                div.appendChild(child)
+                toDoList.value = ""
+            }
+        }
+        add_btn.onclick = add
+
+    </script>
+</body>
+
+</html>
