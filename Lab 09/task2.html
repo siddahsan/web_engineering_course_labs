@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Invitation Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .invitation {
+            background-color: #ffffff;
+            border: 1px solid #cccccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .invitation h2 {
+            color: #333333;
+            margin-top: 0;
+        }
+
+        .invitation p {
+            margin-bottom: 10px;
+        }
+
+        .invitation ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .invitation li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="invitations"></div>
+
+    <script>
+        function generateInvitations(...guests) {
+            const invitations = [];
+            guests.forEach(guest => {
+                const { name, age, rsvp } = guest;
+                let invitationMessage = `<div class="invitation">`;
+                invitationMessage += `<h2>Dear ${name},</h2>`;
+                invitationMessage += `<p>We cordially invite you to our party!`;
+                invitationMessage += `</p>`;
+                invitationMessage += `<p>Details:</p>`;
+                invitationMessage += `<ul>`;
+                invitationMessage += `<li>Name: ${name}</li>`;
+                invitationMessage += `<li>Age: ${age}</li>`;
+                invitationMessage += `<li>RSVP: ${rsvp}</li>`;
+                invitationMessage += `</ul>`;
+                invitationMessage += `</div>`;
+                invitations.push(invitationMessage);
+            });
+            return invitations;
+        }
+
+        const guests = [
+            { name: 'Ahsan', age: 23, rsvp: 'Yes' },
+            { name: 'Amjad', age: 23, rsvp: 'No' },
+            { name: 'Zeeshan', age: 23, rsvp: 'Maybe' }
+        ];
+
+        const invitationMessages = generateInvitations(...guests);
+        const invitationsContainer = document.getElementById('invitations');
+        invitationMessages.forEach(invitation => {
+            invitationsContainer.innerHTML += invitation;
+        });
+    </script>
+</body>
+
+</html>
