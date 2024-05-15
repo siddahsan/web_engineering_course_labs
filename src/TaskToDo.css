@@ -1,0 +1,9 @@
+*{
+    font-family: "Josefin Sans", "Arial Narrow", Arial, sans-serif;
+    font-size: x-large;
+}
+
+.btn-add{
+    background-color: green;
+    color: white;
+}
