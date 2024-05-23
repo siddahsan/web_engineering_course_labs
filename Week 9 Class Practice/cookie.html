@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, 
+				initial-scale=1.0">
+	<title>JavaScript closest()</title>
+</head>
+
+<body>
+	<center>
+		<h1>GeeksforGeeks</h1>
+		<h3>
+			First Click the Set Cookie button to
+			set the cookie and then Get Cookie
+			button to get it.
+		</h3>
+		<p id="result"></p>
+		<button id="setBtn">
+		Set Cookie
+		</button>
+		<button id="getBtn">
+		Get Cookie
+		</button>
+	</center>
+
+	<script>
+		const result = document.getElementById('result');
+		const setBtn = document.getElementById('setBtn');
+		const getBtn = document.getElementById('getBtn');
+
+		function setCookie() {
+			if(document.cookie.length !== 0){
+				result.innerHTML = 
+				`Cookie is already settled!!`;
+			}
+			else{
+				document.cookie = 
+				"visitorname: Emrit Kumar; expires=Mon, 22 Apr 2024 09:33 :00 UTC";
+			}
+			
+		}
+
+		function getCookie(){
+			if(document.cookie.length !== 0){
+				result.innerHTML = 
+				`Cookie: <b>${document.cookie}</b>`;
+			}
+			else{
+				result.innerHTML = 
+				`Please set the cookie first!!`;
+			}
+		}
+
+		setBtn.addEventListener('click', setCookie);
+		getBtn.addEventListener('click', getCookie);
+	</script>
+</body>
+
+</html>

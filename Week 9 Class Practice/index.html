@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9</title>
+    <style>
+        .my_div{
+            display: flex;
+            justify-content: center;
+        }
+        *{
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="my_div">
+        <button id="add">+</button>
+        <h1 id="label">0</h1>
+        <button id="sub">-</button>
+    </div>
+
+    <script>
+        const Inc = document.getElementById("add")
+        const Dec = document.getElementById("sub")
+        const label = document.getElementById("label")
+
+        const localStorageValue = localStorage.getItem("counter")
+        label.innerText = localStorageValue
+
+        let count = localStorageValue
+        function add(){
+            count++
+            label.innerText = count
+            localStorage.setItem("counter",  count)
+        }
+        Inc.onclick = add
+
+        function sub(){
+            count--
+            label.innerText = count
+            localStorage.setItem("counter",  count)
+        }
+        Dec.onclick = sub
+    </script>
+</body>
+</html>
