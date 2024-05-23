@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-04 [JS]</title>
+</head>
+
+<body>
+    <script>
+        //print
+        console.log("This is Script")
+
+        //variable
+        var x = 10;
+        var y = 5;
+        var sum = x + y; 
+
+        //array
+        var colors = ["red", "green", "blue"];
+        for (var i = 0; i < 5; i++) {
+            console.log(colors[i]);
+        }
+
+        //object
+        let my_obj = {
+            name: "Ahsan",
+            cms_id: "021-21-0016",
+            address: {
+                street: "Shorai",
+                city: "Sukkur"
+            }
+        }
+
+        console.log(my_obj['name'])
+        console.log(my_obj['name1'])
+        console.log(my_obj.name)
+
+        //method to find how many keys in an object
+        console.log(Object.keys(my_obj))
+
+        let keys = Object.keys(my_obj)
+        for (var i = 0; i < keys.length; i++) {
+            console.log(my_obj[keys[i]]);
+        }
+
+        //for in loop
+        for (let key in my_obj){
+            console.log(my_obj[key])
+            if(Object.keys(my_obj[key]).length > 0){
+                for (let key2 in my_obj[key]){
+                    console.log(my_obj[key][key2])
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
