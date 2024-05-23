@@ -1,0 +1,10 @@
+.split-screen {
+    display: flex;
+    height: 100vh; 
+}
+
+.split-screen-section {
+    flex: 1;
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+}
