@@ -1,0 +1,30 @@
+.my-btn{
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(165, 27, 27);
+    color: white;
+    border-radius: 5px;
+    transition: 500ms linear;
+}
+
+.my-btn:hover{
+    padding: 10px;
+    background-color: yellow;
+    cursor: pointer;
+    color: black;
+    transition: 500ms linear;
+}
+
+.my-div{
+    display: flex;
+    justify-content: center;
+    background-color: bisque;
+}
+
+p:hover{
+    text-transform: capitalize;
+}
+
+.my-div2 :first-child{
+    color: aqua;
+}
